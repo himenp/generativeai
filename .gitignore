@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# VS Code
+.vscode/
+
+# Environment
+.env
+.venv/
+venv/
+ENV/
+
+# Data
+*.sqlite3
+*.db
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files and folders
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+# Ignore all .tmp** folders
+.tmp/
+.tmp.driveupload/
+.tmp.drivedownload/
