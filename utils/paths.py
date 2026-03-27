@@ -1,5 +1,6 @@
+"""Path utilities for locating project directories and data files."""
+
 from pathlib import Path
-import os
 
 def find_project_root(markers=("requirements.txt", "pyproject.toml", ".git")):
     """Find the project root by walking up from the current directory."""
