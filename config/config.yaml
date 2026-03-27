@@ -1,0 +1,20 @@
+project_name: GenerativeAI
+
+data:
+  raw_dir: data/raw
+  interim_dir: data/interim
+  processed_dir: data/processed
+  outputs_dir: data/outputs
+
+model:
+  random_state: 42
+  test_size: 0.2
+  val_size: 0.1
+
+training:
+  epochs: 10
+  batch_size: 32
+  learning_rate: 0.001
+
+logging:
+  level: INFO
