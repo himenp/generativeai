@@ -20,19 +20,22 @@ def load_config(filename="config.yaml"):
 
 
 def get_config_value(key_path: str, default=None, config_dict=None):
-    """
-    Get a nested config value using dot notation.
+    """Get a nested config value using dot notation.
 
-    Example:
-        get_config_value("model.random_state")
-        get_config_value("data.raw_dir")
+    Args:
+        key_path: Dot-separated path to config value (e.g., "model.random_state")
+        default: Default value if key not found
+        config_dict: Config dictionary to search (uses load_config() if None)
+
+    Returns:
+        Config value or default if not found
     """
     if config_dict is None:
         config_dict = load_config()
 
     keys = key_path.split(".")
     value = config_dict
-    
+
     for key in keys:
         if isinstance(value, dict):
             value = value.get(key)

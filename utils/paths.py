@@ -2,13 +2,16 @@
 
 from pathlib import Path
 
+
 def find_project_root(markers=("requirements.txt", "pyproject.toml", ".git")):
     """Find the project root by walking up from the current directory."""
     cwd = Path.cwd().resolve()
     for path in [cwd] + list(cwd.parents):
         if any((path / marker).exists() for marker in markers):
             return path
-    raise FileNotFoundError("Project root not found. Is this running in the project directory?")
+    raise FileNotFoundError(
+        "Project root not found. Is this running in the project directory?"
+    )
 
 
 ROOT = find_project_root()
